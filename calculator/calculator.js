@@ -1,13 +1,25 @@
-function add () {
+function add (...args) {
+	const add = args.reduce((accumulator, initialValue) => {
+		return accumulator + initialValue;
+	}, 0);
+	return add;
+}
+
+function subtract (...args) {
+	const subtract = args.reduce((accumulator, initialValue) => {
+		return accumulator - initialValue;
+	});
+
+	return subtract;
 	
 }
 
-function subtract () {
-	
-}
+function sum (givenArray) {
+	const summation = givenArray.reduce((accumulator, initialValue) => {
+		return accumulator + initialValue;
+	}, 0);
 
-function sum () {
-	
+	return summation;
 }
 
 function multiply () {
