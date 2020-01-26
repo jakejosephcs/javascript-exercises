@@ -22,15 +22,25 @@ function sum (givenArray) {
 	return summation;
 }
 
-function multiply () {
-	
+function multiply (givenArray) {
+	const mul = givenArray.reduce((accum, initialValue) => {
+		return accum * initialValue;
+	});
+
+	return mul;
 }
 
-function power() {
-	
+function power(base, exponent) {
+	return Math.pow(base,exponent);
 }
 
-function factorial() {
+function factorial(number) {
+	if (number == 0) return 1;
+	let product = 1
+	for (let i = number; i > 0; i--){
+		product *= i;
+	}
+	return product;
 	
 }
 
